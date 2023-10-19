@@ -9,9 +9,18 @@ Kibana
 
 ## Docker Install
 
-Manual install below,
-or use [deviantony/docker-elk](https://github.com/deviantony/docker-elk) docker-compose.
+[deviantony/docker-elk](https://github.com/deviantony/docker-elk) docker-compose (minimal)
 
+```
+docker-compose up setup
+docker-compose up -d
+```
+
+Or opt for a [completely configured docker-compose](https://github.com/sherifabdlnaby/elastdocker)
+
+
+
+### Manual
 
 ```sh
 docker network create elastic
