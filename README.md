@@ -33,7 +33,7 @@ docker run --name es01 --net elastic -p 9200:9200 -it -m 1GB docker.elastic.co/e
 docker run --name kib01 --net elastic -p 5601:5601 docker.elastic.co/kibana/kibana:8.10.3
 # /usr/share/kibana/config/kibana.yml
 
-# TODO: set for Alerts: -e XPACK_ENCRYPTEDSAVEDOBJECTS_ENCRYPTIONKEY ""
+# Required for Alerts: -e XPACK_ENCRYPTEDSAVEDOBJECTS_ENCRYPTIONKEY ""
 # https://stackoverflow.com/questions/67777260/unable-configure-alerts-and-actions-in-kibana
 # xpack.encryptedSavedObjects.encryptionKey: \"7dc1d8151798fcd725e66713e21b4f17\"
 # xpack.encryptedSavedObjects:
@@ -80,8 +80,8 @@ NOT statusCode: 200
 OR / AND with ()
 method: (GET OR POST OR DELETE)
 
-status\ code: 200 --> TODO: check this, need to escape the space? --> only for Lucene syntax?
-exception.*: orm  --> TODO: check this, need to escape the *? --> only for Lucene syntax?
+status\ code: 200
+exception.*: orm
 _exists_:exception
 
 JSON:
