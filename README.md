@@ -80,8 +80,6 @@ NOT statusCode: 200
 OR / AND with ()
 method: (GET OR POST OR DELETE)
 
-status\ code: 200
-exception.*: orm
 _exists_:exception
 
 JSON:
@@ -94,3 +92,4 @@ user.name:{ first: "Alice" and last: "White" }
 - `/regex/`
 - `quikc~ brwn~1 foks~`: fuzzy (default=2)
 - `quick^2 fox`: boosting
+- `status\ code: 200` & `exception.\*: orm`
